@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telegram-share-bot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        value: "REPLACE_WITH_YOUR_TOKEN"
+      - key: MAIN_CHAT_ID
+        value: "REPLACE_WITH_MAIN_CHAT_ID"
+      - key: PRIVATE_GROUP_LINK
+        value: "https://t.me/+GBef4zESkcdmODdk"
+      - key: WEBHOOK_SECRET
+        value: "some-secret-path"
+    ports:
+      - 10000
